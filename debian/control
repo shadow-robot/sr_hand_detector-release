@@ -1,0 +1,12 @@
+Source: ros-melodic-sr-hand-detector
+Section: misc
+Priority: optional
+Maintainer: Shadow Robot's Software Team <software@shadowrobot.com>
+Build-Depends: debhelper (>= 9.0.0), libyaml-cpp-dev, ros-melodic-catkin, ros-melodic-roscpp, ros-melodic-roslib, ros-melodic-rostest
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-sr-hand-detector
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libyaml-cpp-dev, ros-melodic-roscpp, ros-melodic-roslib
+Description: The sr_hand_detector package
