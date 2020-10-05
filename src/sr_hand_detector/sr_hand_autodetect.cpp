@@ -106,11 +106,29 @@ void SrHandAutodetect::compose_command_suffix()
 
     command_sufix_ = " eth_port:=" + eth_port + " hand_serial:=" +
       std::to_string(hand_serial) + " hand_id:=" + hand_id;
+
+    if (hand_info["robot_description"])
+    {
+      std::string robot_description = ros::package::getPath(hand_info["robot_description"] \
+                                                            ["package_name"].as<std::string>()) +
+                                                            "/" + hand_info["robot_description"] \
+                                                            ["relative_path"].as<std::string>();
+      command_sufix_ += " robot_description:=" + robot_description;
+    }
+    if (hand_info["mapping_path"])
+    {
+      std::string mapping_path = ros::package::getPath(hand_info["mapping_path"] \
+                                                       ["package_name"].as<std::string>()) +
+                                                       "/" + hand_info["mapping_path"] \
+                                                       ["relative_path"].as<std::string>();
+      command_sufix_ += " mapping_path:=" + mapping_path;
+    }
   }
   else if (2 == number_of_detected_hands_)
   {
     int rh_serial, lh_serial;
     std::string rh_eth_port, lh_eth_port;
+    command_sufix_.clear();
 
     for (auto const& serial_to_port : hand_serial_and_port_map_)
     {
@@ -120,11 +138,27 @@ void SrHandAutodetect::compose_command_suffix()
       {
         rh_serial = serial_to_port.first;
         rh_eth_port = serial_to_port.second;
+        if (hand_info["mapping_path"])
+        {
+          std::string mapping_path = ros::package::getPath(hand_info["mapping_path"] \
+                                                           ["package_name"].as<std::string>()) +
+                                                           "/" + hand_info["mapping_path"] \
+                                                           ["relative_path"].as<std::string>();
+          command_sufix_ += " rh_mapping_path:=" + mapping_path;
+        }
       }
       else if ("lh" == hand_id)
       {
         lh_serial = serial_to_port.first;
         lh_eth_port = serial_to_port.second;
+        if (hand_info["mapping_path"])
+        {
+          std::string mapping_path = ros::package::getPath(hand_info["mapping_path"] \
+                                                           ["package_name"].as<std::string>()) +
+                                                           "/" + hand_info["mapping_path"] \
+                                                           ["relative_path"].as<std::string>();
+          command_sufix_ += " lh_mapping_path:=" + mapping_path;
+        }
       }
       else
       {
@@ -132,7 +166,7 @@ void SrHandAutodetect::compose_command_suffix()
       }
     }
 
-    command_sufix_ = " eth_port:=" + rh_eth_port + "_" + lh_eth_port + " rh_serial:=" +
+    command_sufix_ += " eth_port:=" + rh_eth_port + "_" + lh_eth_port + " rh_serial:=" +
       std::to_string(rh_serial) + " lh_serial:=" + std::to_string(lh_serial);
   }
   else
