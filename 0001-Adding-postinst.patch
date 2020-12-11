@@ -1,4 +1,4 @@
-From 6c4639d0d0d3efaa62b78428ba7d2d4370bbf4f0 Mon Sep 17 00:00:00 2001
+From 33bc75da37335ca87dbe283d6c458f52542feac5 Mon Sep 17 00:00:00 2001
 From: mikramarc <michal@shadowrobot.com>
 Date: Fri, 11 Dec 2020 15:10:18 +0000
 Subject: [PATCH] Adding postinst
