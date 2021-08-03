@@ -1,0 +1,12 @@
+Source: ros-noetic-sr-hand-detector
+Section: misc
+Priority: optional
+Maintainer: Shadow Robot's Software Team <software@shadowrobot.com>
+Build-Depends: debhelper (>= 9.0.0), libyaml-cpp-dev, ros-noetic-catkin, ros-noetic-roscpp, ros-noetic-roslib, ros-noetic-rostest
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-sr-hand-detector
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libyaml-cpp-dev, ros-noetic-roscpp, ros-noetic-roslib
+Description: The sr_hand_detector package
