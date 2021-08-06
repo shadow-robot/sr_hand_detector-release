@@ -1,3 +1,26 @@
+## sr_hand_detector (noetic) - 0.0.6-1
+
+The packages in the `sr_hand_detector` repository were released into the `noetic` distro by running `/usr/bin/bloom-release sr_hand_detector --rosdistro noetic --track noetic` on `Fri, 06 Aug 2021 15:05:27 -0000`
+
+The `sr_hand_detector` package was released.
+
+Version of package(s) in repository `sr_hand_detector`:
+
+- upstream repository: https://github.com/shadow-robot/sr_hand_detector.git
+- release repository: https://github.com/shadow-robot/sr_hand_detector-release.git
+- rosdistro version: `0.0.5-1`
+- old version: `0.0.5-1`
+- new version: `0.0.6-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## sr_hand_detector (noetic) - 0.0.5-1
 
 The packages in the `sr_hand_detector` repository were released into the `noetic` distro by running `/usr/bin/bloom-release sr_hand_detector --rosdistro noetic --track noetic` on `Tue, 03 Aug 2021 07:39:06 -0000`
