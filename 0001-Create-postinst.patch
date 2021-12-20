@@ -1,4 +1,4 @@
-From 21faba6831fa02eadf72e81bd78f8c5969d26efb Mon Sep 17 00:00:00 2001
+From fbe15585f412d0de8f9286ca26c873fad9c85c69 Mon Sep 17 00:00:00 2001
 From: mikramarc <michal@shadowrobot.com>
 Date: Mon, 2 Aug 2021 15:14:58 +0100
 Subject: [PATCH] Create postinst
